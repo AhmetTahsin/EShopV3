@@ -1,0 +1,1 @@
+Bu Katmanda MongoDb Kullanýldý Katmanlý olarak yapýlmadý herþey tek api üzerinden yapýldý.

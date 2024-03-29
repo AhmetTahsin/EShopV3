@@ -1,0 +1,2 @@
+Bu Katmanda MsSql Kullanýldý Katmanlý olarak yapýlmadý herþey tek api üzerinden yapýldý.
+Sorgular Dapper biçiminde yazýldý.
