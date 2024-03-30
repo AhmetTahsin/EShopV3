@@ -4,18 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EShopV3.Order.Domain.Entities
+namespace EShopV3.Order.Application.Features.CORS.Commands.OrderDetailCommands
 {
-    public class OrderDetail
+    public class CreateOrderDetailCommand
     {
-        public int OrderDetailId { get; set; }
         public string ProductId { get; set; }
         public string ProductName { get; set; }
         public decimal ProductPrice { get; set; }
         public int ProductAmount { get; set; }
         public decimal ProructTotalPrice { get; set; }
         public int OrderingId { get; set; }
-        public Ordering Ordering { get; set; }
-
     }
 }

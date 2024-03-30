@@ -19,7 +19,7 @@ namespace EShopV3.Order.Application.Features.CORS.Handlers.AddressHandlers
         }
         public async Task Handle(UpdateAddressCommand command)
         {
-            var values = await _repository.GetByIdAsync(command.AdressId);
+            var values = await _repository.GetByIdAsync(command.AddressId);
             values.Detail=command.Detail;
             values.District=command.District;
             values.City=command.City;
