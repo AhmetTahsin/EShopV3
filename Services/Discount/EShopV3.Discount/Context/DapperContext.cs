@@ -1,7 +1,6 @@
 ﻿using EShopV3.Discount.Entities;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 using System.Data;
 
 namespace EShopV3.Discount.Context
