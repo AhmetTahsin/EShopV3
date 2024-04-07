@@ -1,6 +1,6 @@
 ﻿namespace EShopV3.Catalog.Dtos.ProductDtos
 {
-    public class GetByIdProductDto
+    public class GetByIdProductDto 
     {
         public string ProductID { get; set; }
         public string ProductName { get; set; }

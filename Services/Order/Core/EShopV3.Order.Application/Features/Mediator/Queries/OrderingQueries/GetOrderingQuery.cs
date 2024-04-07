@@ -10,6 +10,6 @@ namespace EShopV3.Order.Application.Features.Mediator.Queries.OrderingQueries
 {
     public class GetOrderingQuery:IRequest<List<GetOrderingQueryResult>> //MediatR kütüphanesi
     {
-
+        //GetOrderingQuery çağırdığımızda <List<GetOrderingQueryResult>>  döner
     }
 }

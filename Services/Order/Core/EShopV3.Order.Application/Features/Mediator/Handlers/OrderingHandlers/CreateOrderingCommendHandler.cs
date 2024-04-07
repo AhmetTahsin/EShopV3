@@ -12,6 +12,7 @@ namespace EShopV3.Order.Application.Features.Mediator.Handlers.OrderingHandlers
 {
     public class CreateOrderingCommendHandler : IRequestHandler<CreateOrderingCommand>
     {
+        //MediatR IRequestHandler<CreateOrderingCommand> isteğin bu sınıftan yapılabileceğini söyluyor
         private readonly IRepository<Ordering> _repository;
 
         public CreateOrderingCommendHandler(IRepository<Ordering> repository)

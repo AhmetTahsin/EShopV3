@@ -10,7 +10,7 @@ builder.Services.AddDbContext <OrderContext>();
 
 // Add services to the container.
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-builder.Services.AddApplicationService(builder.Configuration);
+builder.Services.AddApplicationService(builder.Configuration); //MediatR( için ServiceInjections
 
 builder.Services.AddScopeService(); //ServiceInjections iþlemi yaptým
 
