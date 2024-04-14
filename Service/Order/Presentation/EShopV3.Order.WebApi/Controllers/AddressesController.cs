@@ -1,11 +1,13 @@
 ﻿using EShopV3.Order.Application.Features.CORS.Commands.AddressCommands;
 using EShopV3.Order.Application.Features.CORS.Handlers.AddressHandlers;
 using EShopV3.Order.Application.Features.CORS.Queries.AddressQueries;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EShopV3.Order.WebApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AddressesController : ControllerBase

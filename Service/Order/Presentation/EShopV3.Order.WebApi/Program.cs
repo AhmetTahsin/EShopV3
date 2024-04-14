@@ -3,8 +3,16 @@ using EShopV3.Order.Application.Services;
 using EShopV3.Order.Persistence.Context;
 using EShopV3.Order.Persistence.Respositories;
 using EShopV3.Order.WebApi.ServiceInjections;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+{
+    opt.Authority = builder.Configuration["IdentityServerUrl"];
+    opt.Audience = "ResourceOrder";
+    opt.RequireHttpsMetadata = false; //Https yerine http kullanýmý için
+});
 
 builder.Services.AddDbContext <OrderContext>();
 
@@ -30,6 +38,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

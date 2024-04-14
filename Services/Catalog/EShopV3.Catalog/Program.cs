@@ -1,12 +1,19 @@
 using EShopV3.Catalog.Mapping;
 using EShopV3.Catalog.ServiceInjections;
 using EShopV3.Catalog.Settings;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using System.Reflection;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+{
+    opt.Authority = builder.Configuration["IdentityServerUrl"];
+    opt.Audience = "ResourceCatalog";   //Bu tokena sahip ise bu katmana eriþim saðlayabilir
+    opt.RequireHttpsMetadata = false; //Https yerine http kullanýmý için
+});
 
 builder.Services.AddScopeService(); //Service Injection yaptim
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly()); //AutoMapper
@@ -32,6 +39,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
