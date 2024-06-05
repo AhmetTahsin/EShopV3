@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.26" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.28">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.28">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EShopV3.Cargo.BusinessLayer\EShopV3.Cargo.BusinessLayer.csproj" />
+    <ProjectReference Include="..\EShopV3.Cargo.DataAccessLayer\EShopV3.Cargo.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\EShopV3.Cargo.DtoLayer\EShopV3.Cargo.DtoLayer.csproj" />
+    <ProjectReference Include="..\EShopV3.Cargo.EntityLayer\EShopV3.Cargo.EntityLayer.csproj" />
+  </ItemGroup>
+
+</Project>

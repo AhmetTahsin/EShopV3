@@ -25,7 +25,7 @@ namespace EShopV3.Catalog.Services.CategoryServices
         public async Task CreateCategoryAsync(CreateCategoryDto createcategoryDto)
         {
             var value=_mapper.Map<Category>(createcategoryDto);
-            await _categoryCollection.InsertOneAsync(value); 
+            await _categoryCollection.InsertOneAsync(value);
         }
         /// <summary>
         /// MongoDb ID'ye göre silme metodu
