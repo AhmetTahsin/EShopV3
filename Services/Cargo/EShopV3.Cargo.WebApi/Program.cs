@@ -3,11 +3,17 @@ using EShopV3.Cargo.BusinessLayer.Concrete;
 using EShopV3.Cargo.DataAccessLayer.Abstract;
 using EShopV3.Cargo.DataAccessLayer.Concrete;
 using EShopV3.Cargo.DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+{
+    opt.Authority = builder.Configuration["IdentityServerUrl"];
+    opt.Audience = "ResourceCargo";   //Bu tokena sahip ise bu katmana eriþim saðlayabilir
+    opt.RequireHttpsMetadata = false; //Https yerine http kullanýmý için
+});
 
 builder.Services.AddDbContext<CargoContext>();
 builder.Services.AddScoped<ICargoCompanyDal, EFCargoCompanyDal>();
@@ -36,6 +42,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
