@@ -10,7 +10,7 @@ namespace EShopV3.Cargo.WebApi.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class CargoOperationsController : ControllerBase
+    public class CargoOperationsController : ControllerBase 
     {
         private readonly ICargoOperationService _operationService;
 
