@@ -53,7 +53,7 @@ namespace EShopV3.IdentityServer
             {
                 ClientId="EShopShopManagerId",
                 ClientName="EShop Manager User",
-                AllowedGrantTypes= GrantTypes.ClientCredentials,
+                AllowedGrantTypes= GrantTypes.ResourceOwnerPassword,
                 ClientSecrets ={new Secret("eshopsecret".Sha256())},
                 AllowedScopes={ "CatalogReadPermission", "CatalogFullPermission" }
             },
@@ -62,7 +62,7 @@ namespace EShopV3.IdentityServer
             {
                 ClientId="EShopAdminId",
                 ClientName="EShop Admin User",
-                AllowedGrantTypes= GrantTypes.ClientCredentials,
+                AllowedGrantTypes= GrantTypes.ResourceOwnerPassword,
                 ClientSecrets ={new Secret("eshopsecret".Sha256())},
                 AllowedScopes={ "CatalogFullPermission", "CatalogReadPermission", "DiscountFullPermission", "OrderFullPermission","CargoFullPermission","BasketFullPermission",
                 IdentityServerConstants.LocalApi.ScopeName,

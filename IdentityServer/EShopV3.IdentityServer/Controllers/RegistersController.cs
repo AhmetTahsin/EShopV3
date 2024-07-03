@@ -10,7 +10,7 @@ using static IdentityServer4.IdentityServerConstants;
 
 namespace EShopV3.IdentityServer.Controllers
 {
-    [Authorize(LocalApi.PolicyName)] 
+   // [Authorize(LocalApi.PolicyName)] 
     [Route("api/[controller]")]
     [ApiController]
     public class RegistersController : ControllerBase

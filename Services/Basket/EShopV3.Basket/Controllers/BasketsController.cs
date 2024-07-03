@@ -19,9 +19,10 @@ namespace EShopV3.Basket.Controllers
             _basketService = basketService;
         }
         [HttpGet]
-        public async Task<IActionResult> GetBasket()
+        public async Task<IActionResult> GetMyBasketDetail()
         {
-            var values = _basketService.GetBasket(_loginService.GetUserId);
+            var user = User.Claims;
+            var values =await _basketService.GetBasket(_loginService.GetUserId);
             return Ok(values);
         }
 
