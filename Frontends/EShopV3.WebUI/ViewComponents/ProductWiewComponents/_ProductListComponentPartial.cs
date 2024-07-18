@@ -2,7 +2,7 @@
 
 namespace EShopV3.WebUI.ViewComponents.ProductWiewComponents
 {
-    public class _ProductListPriceFilterComponentPartial : ViewComponent
+    public class _ProductListComponentPartial : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

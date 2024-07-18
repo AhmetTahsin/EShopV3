@@ -8,5 +8,10 @@ namespace EShopV3.WebUI.Controllers
         {
             return View();
         }
+
+        public IActionResult ProductDetail()
+        {
+            return View();
+        }
     }
 }
