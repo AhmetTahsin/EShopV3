@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EShopV3.Catalog.Controllers
 {
-    [Authorize]
+    // [Authorize]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
@@ -48,6 +49,12 @@ namespace EShopV3.Catalog.Controllers
         {
             await _productService.UpdateProductAsync(updateProductDto);
             return Ok("Urun basari ile güncellendi");
+        }
+        [HttpGet("ProductListWithCategory")]
+        public async Task<IActionResult> ProductListWithCategory()
+        {
+            var values= await _productService.GetProductsWithCategoryAsync();
+            return Ok(values);
         }
     }
 }

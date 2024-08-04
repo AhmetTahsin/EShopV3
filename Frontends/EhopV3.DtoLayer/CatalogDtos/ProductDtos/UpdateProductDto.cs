@@ -1,22 +1,18 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace EShopV3.Catalog.Entities
+namespace EhopV3.DtoLayer.CatalogDtos.ProductDtos
 {
-    public class Product
+    public class UpdateProductDto
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
         public string ProductID { get; set; }
         public string ProductName { get; set; }
         public decimal ProductPrice { get; set; }
         public string ProductImageUrl { get; set; }
         public string ProductDescription { get; set; }
-
-        [BsonRepresentation(BsonType.ObjectId)]
         public string CategoryID { get; set; }
-        [BsonIgnore]
-        public Category Category { get; set; }
-
     }
 }

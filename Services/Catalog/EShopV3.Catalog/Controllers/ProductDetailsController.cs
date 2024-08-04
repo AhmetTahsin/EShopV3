@@ -1,10 +1,12 @@
 ﻿using EShopV3.Catalog.Dtos.ProductDetailDtos;
 using EShopV3.Catalog.Services.ProductDetailServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EShopV3.Catalog.Controllers
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductDetailsController : ControllerBase
