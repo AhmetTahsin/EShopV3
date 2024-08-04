@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EShopV3.Catalog.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
