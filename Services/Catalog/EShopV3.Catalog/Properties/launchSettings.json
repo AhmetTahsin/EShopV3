@@ -12,7 +12,7 @@
     "EShopV3.Catalog": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": false, //Launcher açılmasın
+      "launchBrowser": true, //Launcher açılmasın
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7070",
       "environmentVariables": {

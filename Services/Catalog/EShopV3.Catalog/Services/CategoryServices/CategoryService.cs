@@ -20,11 +20,11 @@ namespace EShopV3.Catalog.Services.CategoryServices
         /// <summary>
         /// MongoDb Ekleme Metodu
         /// </summary>
-        /// <param name="createcategoryDto"></param>
+        /// <param name="createCategoryDto"></param>
         /// <returns></returns>
-        public async Task CreateCategoryAsync(CreateCategoryDto createcategoryDto)
+        public async Task CreateCategoryAsync(CreateCategoryDto createCategoryDto)
         {
-            var value=_mapper.Map<Category>(createcategoryDto);
+            var value=_mapper.Map<Category>(createCategoryDto);
             await _categoryCollection.InsertOneAsync(value);
         }
         /// <summary>
@@ -60,10 +60,10 @@ namespace EShopV3.Catalog.Services.CategoryServices
         /// </summary>
         /// <param name="updatecategoryDto"></param>
         /// <returns></returns>
-        public async Task UpdateCategoryAsync(UpdateCategoryDto updatecategoryDto)
+        public async Task UpdateCategoryAsync(UpdateCategoryDto updateCategoryDto)
         {
-            var values=_mapper.Map<Category>(updatecategoryDto);
-            await _categoryCollection.FindOneAndReplaceAsync(x=>x.CategoryID == updatecategoryDto.CategoryID, values); //MongoDb Guncelleme metodu
+            var values=_mapper.Map<Category>(updateCategoryDto);
+            await _categoryCollection.FindOneAndReplaceAsync(x=>x.CategoryID == updateCategoryDto.CategoryID, values); //MongoDb Guncelleme metodu
         }
     }
 }
