@@ -3,6 +3,7 @@ using EShopV3.Catalog.Services.FeatureSliderServices;
 using EShopV3.Catalog.Services.ProductDetailServices;
 using EShopV3.Catalog.Services.ProductImageServices;
 using EShopV3.Catalog.Services.ProductServices;
+using EShopV3.Catalog.Services.SpecialOfferServices;
 
 namespace EShopV3.Catalog.ServiceInjections
 {
@@ -15,6 +16,8 @@ namespace EShopV3.Catalog.ServiceInjections
             services.AddScoped<IProductDetailService, ProductDetailService>();
             services.AddScoped<IProductImageService, ProductImageService>();
             services.AddScoped<IFeatureSliderService, FeatureSliderService>();
+            services.AddScoped<ISpecialOfferService, SpecialOfferService>();
+
 
             return services;
         }

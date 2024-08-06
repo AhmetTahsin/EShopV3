@@ -2,7 +2,7 @@
 
 namespace EShopV3.WebUI.ViewComponents.DefaultViewComponents
 {
-    public class _SpeacialOfferComponentPartal:ViewComponent
+    public class _SpeacialOfferComponentPartial:ViewComponent
     {
         public IViewComponentResult Invoke()
         {

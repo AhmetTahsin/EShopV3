@@ -4,6 +4,7 @@ using EShopV3.Catalog.Dtos.FeatureSliderDtos;
 using EShopV3.Catalog.Dtos.ProductDetailDtos;
 using EShopV3.Catalog.Dtos.ProductDtos;
 using EShopV3.Catalog.Dtos.ProductImageDtos;
+using EShopV3.Catalog.Dtos.SpecialOfferDtos;
 using EShopV3.Catalog.Entities;
 
 namespace EShopV3.Catalog.Mapping
@@ -36,6 +37,11 @@ namespace EShopV3.Catalog.Mapping
             CreateMap<FeatureSlider, CreateFeatureSliderDto>().ReverseMap();
             CreateMap<FeatureSlider, UpdateFeatureSliderDto>().ReverseMap();
             CreateMap<FeatureSlider, GetByIdFeatureSliderDto>().ReverseMap();
+
+            CreateMap<SpecialOffer, ResultSpecialOfferDto>().ReverseMap();
+            CreateMap<SpecialOffer, CreateSpecialOfferDto>().ReverseMap();
+            CreateMap<SpecialOffer, UpdateSpecialOfferDto>().ReverseMap();
+            CreateMap<SpecialOffer, GetByIdSpecialOfferDto>().ReverseMap();
 
             
 
