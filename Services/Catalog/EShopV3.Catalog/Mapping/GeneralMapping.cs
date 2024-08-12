@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using EShopV3.Catalog.Dtos.CategoryDtos;
+using EShopV3.Catalog.Dtos.FeatureDtos;
 using EShopV3.Catalog.Dtos.FeatureSliderDtos;
 using EShopV3.Catalog.Dtos.ProductDetailDtos;
 using EShopV3.Catalog.Dtos.ProductDtos;
@@ -43,7 +44,10 @@ namespace EShopV3.Catalog.Mapping
             CreateMap<SpecialOffer, UpdateSpecialOfferDto>().ReverseMap();
             CreateMap<SpecialOffer, GetByIdSpecialOfferDto>().ReverseMap();
 
-            
+            CreateMap<Feature, ResultFeatureDto>().ReverseMap();
+            CreateMap<Feature, CreateFeatureDto>().ReverseMap();
+            CreateMap<Feature, UpdateFeatureDto>().ReverseMap();
+            CreateMap<Feature, GetByIdFeatureDto>().ReverseMap();
 
 
 

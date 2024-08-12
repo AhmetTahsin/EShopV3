@@ -1,6 +1,6 @@
-﻿@model UpdateCategoryDto
+﻿@model UpdateSpecialOfferDto
 @{
-    ViewData["Title"] = "UpdateCategory";
+    ViewData["Title"] = "UpdateSpecialOffer";
     Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
 }
 
@@ -14,14 +14,17 @@
                 <div class="bs-example" data-example-id="bordered-table">
 
                     <form method="post">
-                        <input type="hidden"  asp-for="CategoryID" />
-                        <label>Kategori Adı</label>
-                        <input type="text" class="form-control" asp-for="CategoryName" />
+                        <input type="hidden" asp-for="SpecialOfferId" />
+                        <label>Teklif Başlığı</label>
+                        <input type="text" class="form-control" asp-for="Title" />
                         <br />
-                        <label>Kategori Görsel</label>
+                        <label>Teklif Altbaşlığı</label>
+                        <input type="text" class="form-control" asp-for="SubTitle" />
+                        <br />
+                        <label>Teklif Görseli</label>
                         <input type="text" class="form-control" asp-for="ImageUrl" />
                         <br />
-                        <button class="btn btn-primary">Kategori Güncelle</button>
+                        <button class="btn btn-primary">Özel Tekfil Güncelle</button>
                     </form>
 
                 </div>

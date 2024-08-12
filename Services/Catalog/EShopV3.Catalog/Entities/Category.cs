@@ -9,5 +9,6 @@ namespace EShopV3.Catalog.Entities
         [BsonRepresentation(BsonType.ObjectId)]//Unike Oldugunu belirtmek için 
         public string CategoryID { get; set; }//MongoDb'de string olarak tutulur
         public string CategoryName { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

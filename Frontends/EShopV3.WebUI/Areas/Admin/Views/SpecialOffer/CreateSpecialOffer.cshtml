@@ -1,8 +1,8 @@
-﻿@model CreateCategoryDto
+﻿@model CreateSpecialOfferDto
 
 
 @{
-    ViewData["Title"] = "CreateCategory";
+    ViewData["Title"] = "CreateSpecialOffer";
     Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
 }
 
@@ -14,15 +14,18 @@
                 <h4>Kategori Ekleme</h4>
                 <br />
                 <div class="bs-example" data-example-id="bordered-table">
-                    
-                    <form method="post" >
-                        <label>Kategori Adı</label>
-                        <input type="text" class="form-control" asp-for="CategoryName" />
+
+                    <form method="post">
+                        <label>Teklif Başlığı</label>
+                        <input type="text" class="form-control" asp-for="Title" />
                         <br />
-                        <label>Kategori Görseli</label>
+                        <label>Teklif Altbaşlığı</label>
+                        <input type="text" class="form-control" asp-for="SubTitle" />
+                        <br />
+                        <label>Teklif Görseli</label>
                         <input type="text" class="form-control" asp-for="ImageUrl" />
                         <br />
-                        <button class="btn btn-primary">Kategori Ekle</button>
+                        <button class="btn btn-primary">Özel Teklif Ekle</button>
                     </form>
                 </div>
             </div>
