@@ -66,7 +66,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShopV3.WebUI", "Frontends\EShopV3.WebUI\EShopV3.WebUI.csproj", "{5FA9FC4A-3624-4104-9F32-C1C1F2C431CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EhopV3.DtoLayer", "Frontends\EhopV3.DtoLayer\EhopV3.DtoLayer.csproj", "{4B968965-7420-4AEE-AA1E-08B622B96B1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EhopV3.DtoLayer", "Frontends\EhopV3.DtoLayer\EhopV3.DtoLayer.csproj", "{4B968965-7420-4AEE-AA1E-08B622B96B1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
