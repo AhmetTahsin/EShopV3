@@ -34,7 +34,7 @@ namespace EShopV3.Catalog.Services.CategoryServices
         /// <returns></returns>
         public async Task DeleteCategoryAsync(string id)
         {
-            await _categoryCollection.DeleteOneAsync(x=>x.CategoryID==id);
+            await _categoryCollection.DeleteOneAsync(x=>x.CategoryId==id);
         }
         /// <summary>
         /// MongoDb Listeleme
@@ -52,7 +52,7 @@ namespace EShopV3.Catalog.Services.CategoryServices
         /// <returns></returns>
         public async Task<GetByIdCategoryDto> GetByIdCategoryAsync(string id)
         {
-            var values=await _categoryCollection.Find<Category>(x=>x.CategoryID == id).FirstOrDefaultAsync(); //Find ile şarta göre bul sonra degeri al
+            var values=await _categoryCollection.Find<Category>(x=>x.CategoryId == id).FirstOrDefaultAsync(); //Find ile şarta göre bul sonra degeri al
             return _mapper.Map<GetByIdCategoryDto>(values);
         }
         /// <summary>
@@ -63,7 +63,7 @@ namespace EShopV3.Catalog.Services.CategoryServices
         public async Task UpdateCategoryAsync(UpdateCategoryDto updateCategoryDto)
         {
             var values=_mapper.Map<Category>(updateCategoryDto);
-            await _categoryCollection.FindOneAndReplaceAsync(x=>x.CategoryID == updateCategoryDto.CategoryID, values); //MongoDb Guncelleme metodu
+            await _categoryCollection.FindOneAndReplaceAsync(x=>x.CategoryId == updateCategoryDto.CategoryId, values); //MongoDb Guncelleme metodu
         }
     }
 }

@@ -26,7 +26,7 @@ namespace EShopV3.Catalog.Services.ProductImageServices
 
         public async Task DeleteProductImageAsync(string id)
         {
-            await _productImageCollection.DeleteOneAsync(x => x.ProductID == id);
+            await _productImageCollection.DeleteOneAsync(x => x.ProductId == id);
         }
 
         public async Task<List<ResultProductImageDto>> GetAllProductImageAsync()
@@ -37,14 +37,14 @@ namespace EShopV3.Catalog.Services.ProductImageServices
 
         public async Task<GetByIdProductImageDto> GetByIdProductImageAsync(string id)
         {
-            var values = await _productImageCollection.Find(x => x.ProductID == id).FirstOrDefaultAsync();
+            var values = await _productImageCollection.Find(x => x.ProductId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdProductImageDto>(values);
         }
 
         public async Task UpdateProductImageAsync(UpdateProductImageDto updateProductImageDto)
         {
             var values = _mapper.Map<ProductImage>(updateProductImageDto);
-            await _productImageCollection.FindOneAndReplaceAsync(x => x.ProductID == updateProductImageDto.ProductID, values);
+            await _productImageCollection.FindOneAndReplaceAsync(x => x.ProductId == updateProductImageDto.ProductId, values);
         }
     }
 }

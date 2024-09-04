@@ -78,7 +78,7 @@ namespace EShopV3.WebUI.Areas.Admin.Controllers
                                                    select new SelectListItem
                                                    {
                                                        Text= x.CategoryName,
-                                                       Value= x.CategoryID,
+                                                       Value= x.CategoryId,
                                                    }).ToList();
             ViewBag.CategoryValues = categoryValues;
             //List<SelectListItem> categoryValues = new List<SelectListItem>();     Bu Yapının aynısı Dictionary benzeri bir yapı
@@ -141,7 +141,7 @@ namespace EShopV3.WebUI.Areas.Admin.Controllers
                                                    select new SelectListItem
                                                    {
                                                        Text = x.CategoryName,
-                                                       Value = x.CategoryID,
+                                                       Value = x.CategoryId,
                                                    }).ToList();
             ViewBag.CategoryValues = categoryValues1;
 

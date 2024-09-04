@@ -1,4 +1,5 @@
-﻿using EShopV3.Catalog.Services.CategoryServices;
+﻿using EShopV3.Catalog.Services.BrandServices;
+using EShopV3.Catalog.Services.CategoryServices;
 using EShopV3.Catalog.Services.FeatureServices;
 using EShopV3.Catalog.Services.FeatureSliderServices;
 using EShopV3.Catalog.Services.OfferDiscountServices;
@@ -21,6 +22,7 @@ namespace EShopV3.Catalog.ServiceInjections
             services.AddScoped<ISpecialOfferService, SpecialOfferService>();
             services.AddScoped<IFeatureService, FeatureService>();
             services.AddScoped<IOfferDiscountService, OfferDiscountService>();
+            services.AddScoped<IBrandService, BrandService>();
 
 
             return services;

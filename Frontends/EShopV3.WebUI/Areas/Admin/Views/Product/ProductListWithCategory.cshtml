@@ -31,8 +31,8 @@
                                     <td>@item.ProductName</td>
                                     <td>@item.ProductPrice TL</td>
                                     <td>@item.Category.CategoryName</td>
-                                    <td><a asp-action="DeleteProduct" asp-route-id="@item.ProductID" class="btn btn-danger">Sil</a></td>
-                                    <td><a href="/Admin/Product/UpdateProduct/@item.ProductID" class="btn btn-warning">Güncelle</a></td>
+                                    <td><a asp-action="DeleteProduct" asp-route-id="@item.ProductId" class="btn btn-danger">Sil</a></td>
+                                    <td><a href="/Admin/Product/UpdateProduct/@item.ProductId" class="btn btn-warning">Güncelle</a></td>
                                 </tr>
                             }
 

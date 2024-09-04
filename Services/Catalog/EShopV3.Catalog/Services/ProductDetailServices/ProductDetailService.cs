@@ -27,7 +27,7 @@ namespace EShopV3.Catalog.Services.ProductDetailServices
 
         public async Task DeleteProductDetailAsync(string id)
         {
-            await _productDetailCollection.DeleteOneAsync(x => x.ProductID == id);
+            await _productDetailCollection.DeleteOneAsync(x => x.ProductId == id);
         }
 
         public async Task<List<ResultProductDetailDto>> GetAllProductDetailAsync()
@@ -38,14 +38,14 @@ namespace EShopV3.Catalog.Services.ProductDetailServices
 
         public async Task<GetByIdProductDetailDto> GetByIdProductDetailAsync(string id)
         {
-            var values = await _productDetailCollection.Find(x => x.ProductID == id).FirstOrDefaultAsync();
+            var values = await _productDetailCollection.Find(x => x.ProductId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdProductDetailDto>(values);
         }
 
         public async Task UpdateProductDetailAsync(UpdateProductDetailDto updateProductDetailDto)
         {
             var values = _mapper.Map<ProductDetail>(updateProductDetailDto);
-            await _productDetailCollection.FindOneAndReplaceAsync(x => x.ProductID == updateProductDetailDto.ProductID, values);
+            await _productDetailCollection.FindOneAndReplaceAsync(x => x.ProductId == updateProductDetailDto.ProductId, values);
         }
     }
 }

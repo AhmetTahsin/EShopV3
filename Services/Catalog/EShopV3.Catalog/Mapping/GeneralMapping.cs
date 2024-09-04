@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using EShopV3.Catalog.Dtos.BrandDtos;
 using EShopV3.Catalog.Dtos.CategoryDtos;
 using EShopV3.Catalog.Dtos.FeatureDtos;
 using EShopV3.Catalog.Dtos.FeatureSliderDtos;
@@ -24,6 +25,8 @@ namespace EShopV3.Catalog.Mapping
             CreateMap<Product, CreateProductDto>().ReverseMap();
             CreateMap<Product, UpdateProductDto>().ReverseMap();
             CreateMap<Product, GetByIdProductDto>().ReverseMap();
+
+            CreateMap<Product, ResultProductsWithCategoryDto>().ReverseMap();
 
             CreateMap<ProductDetail, ResultProductDetailDto>().ReverseMap();
             CreateMap<ProductDetail, CreateProductDetailDto>().ReverseMap();
@@ -55,7 +58,12 @@ namespace EShopV3.Catalog.Mapping
             CreateMap<OfferDiscount, UpdateOfferDiscountDto>().ReverseMap();
             CreateMap<OfferDiscount, GetByIdOfferDiscountDto>().ReverseMap();
 
-            CreateMap<Product,ResultProductsWithCategoryDto>().ReverseMap();
+            CreateMap<Brand, ResultBrandDto>().ReverseMap();
+            CreateMap<Brand, CreateBrandDto>().ReverseMap();
+            CreateMap<Brand, UpdateBrandDto>().ReverseMap();
+            CreateMap<Brand, GetByIdBrandDto>().ReverseMap();
+
+
         }
     }
 }

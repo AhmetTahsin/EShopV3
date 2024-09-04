@@ -30,7 +30,7 @@ namespace EShopV3.Catalog.Services.ProductServices
 
         public async Task DeleteProductAsync(string id)
         {
-            await _productCollection.DeleteOneAsync(x => x.ProductID == id);
+            await _productCollection.DeleteOneAsync(x => x.ProductId == id);
         }
 
         public async Task<List<ResultProductDto>> GetAllProductAsync()
@@ -41,7 +41,7 @@ namespace EShopV3.Catalog.Services.ProductServices
 
         public async Task<GetByIdProductDto> GetByIdProductAsync(string id)
         {
-            var values = await _productCollection.Find(x => x.ProductID == id).FirstOrDefaultAsync();
+            var values = await _productCollection.Find(x => x.ProductId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdProductDto>(values);
         }
 
@@ -50,7 +50,7 @@ namespace EShopV3.Catalog.Services.ProductServices
             var values= await _productCollection.Find(x=> true).ToListAsync();
             foreach (var item in values)
             {
-                item.Category = await _categoryCollection.Find<Category>(x=>x.CategoryID == item.CategoryID).FirstAsync();
+                item.Category = await _categoryCollection.Find<Category>(x=>x.CategoryId == item.CategoryId).FirstAsync();
             }
             return _mapper.Map<List<ResultProductsWithCategoryDto>>(values);
 
@@ -59,7 +59,7 @@ namespace EShopV3.Catalog.Services.ProductServices
         public async Task UpdateProductAsync(UpdateProductDto updateProductDto)
         {
             var values = _mapper.Map<Product>(updateProductDto);
-            await _productCollection.FindOneAndReplaceAsync(x => x.ProductID == updateProductDto.ProductID, values);
+            await _productCollection.FindOneAndReplaceAsync(x => x.ProductId == updateProductDto.ProductId, values);
         }
     }
 }
