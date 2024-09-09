@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using EShopV3.Catalog.Dtos.AboutDtos;
 using EShopV3.Catalog.Dtos.BrandDtos;
 using EShopV3.Catalog.Dtos.CategoryDtos;
 using EShopV3.Catalog.Dtos.FeatureDtos;
@@ -63,7 +64,10 @@ namespace EShopV3.Catalog.Mapping
             CreateMap<Brand, UpdateBrandDto>().ReverseMap();
             CreateMap<Brand, GetByIdBrandDto>().ReverseMap();
 
-
+            CreateMap<About, ResultAboutDto>().ReverseMap();
+            CreateMap<About, CreateAboutDto>().ReverseMap();
+            CreateMap<About, UpdateAboutDto>().ReverseMap();
+            CreateMap<About, GetByIdAboutDto>().ReverseMap();
         }
     }
 }
