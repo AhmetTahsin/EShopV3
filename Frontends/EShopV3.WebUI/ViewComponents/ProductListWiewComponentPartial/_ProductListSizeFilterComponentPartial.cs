@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace EShopV3.WebUI.ViewComponents.ProductWiewComponents
+namespace EShopV3.WebUI.ViewComponents.ProductListWiewComponentPartial
 {
-    public class _ProductListGetProductCountComponentPartial:ViewComponent
+    public class _ProductListSizeFilterComponentPartial : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

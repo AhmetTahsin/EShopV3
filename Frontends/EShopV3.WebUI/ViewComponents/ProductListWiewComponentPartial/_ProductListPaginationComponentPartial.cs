@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace EShopV3.WebUI.ViewComponents.ProductWiewComponents
+namespace EShopV3.WebUI.ViewComponents.ProductListWiewComponentPartial
 {
     public class _ProductListPaginationComponentPartial : ViewComponent
     {
