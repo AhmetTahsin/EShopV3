@@ -1,4 +1,4 @@
-﻿namespace EShopV3.Catalog.Dtos.ProductImageDtos
+﻿namespace EhopV3.DtoLayer.CatalogDtos.ProductImageDtos
 {
     public class CreateProductImageDto
     {

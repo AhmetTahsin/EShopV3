@@ -1,7 +1,8 @@
-﻿namespace EShopV3.Catalog.Dtos.ProductImageDtos
+﻿namespace EhopV3.DtoLayer.CatalogDtos.ProductImageDtos
 {
-    public class CreateProductImageDto
+    public class GetByIdProductImageDto
     {
+        public string ProductImageId { get; set; }
         public string Image1 { get; set; }
         public string Image2 { get; set; }
         public string Image3 { get; set; }
